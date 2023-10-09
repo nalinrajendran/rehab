@@ -3,8 +3,7 @@ import streamlit as st
 from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader
 
 
-config = toml.load('secrets.toml')
-os.environ["OPENAI_API_KEY"] = config['secrets']['OPENAI_API_KEY']
+os.environ["OPENAI_API_KEY"] = st.secrets["secrets"]["OPENAI_API_KEY"]
 
 @st.cache_resource(experimental_allow_widgets=True)
 def load_data():
