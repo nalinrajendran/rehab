@@ -1,6 +1,8 @@
 import toml
 import streamlit as st
 from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader
+from llama_index import VectorStoreIndex
+
 import os
 from pypdf import PdfReader
 
