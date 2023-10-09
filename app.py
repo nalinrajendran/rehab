@@ -1,9 +1,10 @@
-import os
+import toml
 import streamlit as st
 from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader
-import dotenv
 
-dotenv.load_dotenv()
+
+config = toml.load('config.toml')
+os.environ["OPENAI_API_KEY"] = config['secrets']['OPENAI_API_KEY']
 
 @st.cache_resource(experimental_allow_widgets=True)
 def load_data():
