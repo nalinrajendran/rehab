@@ -2,6 +2,7 @@ import toml
 import streamlit as st
 from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader
 import os
+import pypdf
 
 os.environ["OPENAI_API_KEY"] = st.secrets["secrets"]["OPENAI_API_KEY"]
 
