@@ -36,8 +36,8 @@ st.title("Rehab Document Query Engine")
 user_input = st.text_input("Ask a question about the AKPMR document:")
 
 if user_input:
-    result = query_engine.query(user_input)  # Use the query method on the query engine object
-    st.write(result)
+    result = query_engine.query(user_input)
+    st.write(result.response) 
 
 
 
