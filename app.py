@@ -3,7 +3,7 @@ import streamlit as st
 from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader
 import os
 # import PyPDF2
-import pypdf
+import fitz
 
 os.environ["OPENAI_API_KEY"] = st.secrets["secrets"]["OPENAI_API_KEY"]
 
