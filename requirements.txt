@@ -1,4 +1,4 @@
 openai
 llama-index
 PyPDF2
-pypdf
+PyMuPDF
