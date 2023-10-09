@@ -1,4 +1,3 @@
 openai
 llama-index
-PyPDF2
-PyMuPDF
+pypdf[crypto]
