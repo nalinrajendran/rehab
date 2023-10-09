@@ -7,7 +7,21 @@ from pypdf import PdfReader
 
 os.environ["OPENAI_API_KEY"] = st.secrets["secrets"]["OPENAI_API_KEY"]
 
-@st.cache_resource(experimental_allow_widgets=True)
+# @st.cache_resource(experimental_allow_widgets=True)
+# def load_data():
+#     documents = SimpleDirectoryReader('data').load_data()
+#     return GPTVectorStoreIndex.from_documents(documents)
+
+# index = load_data()
+
+# st.title("Rehab Document Query Engine")
+# user_input = st.text_input("Ask a question about the AKPMR document:")
+
+# if user_input:
+#     result = index.query(user_input)
+#     st.write(result)
+
+@st.cache(allow_output_mutation=True)
 def load_data():
     documents = SimpleDirectoryReader('data').load_data()
     return GPTVectorStoreIndex.from_documents(documents)
@@ -20,3 +34,7 @@ user_input = st.text_input("Ask a question about the AKPMR document:")
 if user_input:
     result = index.query(user_input)
     st.write(result)
+
+
+
+
