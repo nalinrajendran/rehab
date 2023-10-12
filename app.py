@@ -30,10 +30,10 @@ def load_data():
     return VectorStoreIndex.from_documents(documents)
 
 index = load_data()
-query_engine = index.as_query_engine()  # Create a query engine from the index
+query_engine = index.as_query_engine() 
 
-st.title("Rehab Document Query Engine")
-user_input = st.text_input("Ask a question about the AKPMR document:")
+st.title("Rehab Document QA system")
+user_input = st.text_input("Ask a question about the AKPMR documents:")
 
 if user_input:
     result = query_engine.query(user_input)
