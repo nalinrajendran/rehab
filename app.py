@@ -16,8 +16,8 @@ os.environ["OPENAI_API_KEY"] = st.secrets["secrets"]["OPENAI_API_KEY"]
 
 # index = load_data()
 
-# st.title("Rehab Document Query Engine")
-# user_input = st.text_input("Ask a question about the AKPMR document:")
+# st.title("Rehab Document QA system")
+# user_input = st.text_input("Ask a question about the AKPMR documents:")
 
 # if user_input:
 #     result = index.query(user_input)
