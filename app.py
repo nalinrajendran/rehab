@@ -32,8 +32,8 @@ def load_data():
 index = load_data()
 query_engine = index.as_query_engine() 
 
-st.title("Rehab Document QA system")
-user_input = st.text_input("Ask a question about the AKPMR documents:")
+st.title("QA system")
+user_input = st.text_input("Just Ask a question")
 
 if user_input:
     result = query_engine.query(user_input)
