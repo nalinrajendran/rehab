@@ -26,7 +26,7 @@ os.environ["OPENAI_API_KEY"] = st.secrets["secrets"]["OPENAI_API_KEY"]
 
 @st.cache_resource(experimental_allow_widgets=True)
 def load_data():
-    documents = SimpleDirectoryReader('data').load_data()
+    documents = SimpleDirectoryReader('set').load_data()
     return VectorStoreIndex.from_documents(documents)
 
 index = load_data()
